@@ -20,7 +20,9 @@ export function Input({
   return (
     <div className={`flex flex-col ${className}`}>
       {label && (
-        <label className="text-base lg:text-lg font-bold text-blue-300 mb-2">{label}</label>
+        <label className="text-base lg:text-lg font-bold text-blue-300 mb-2">
+          {label}
+        </label>
       )}
       <motion.input
         whileFocus={{

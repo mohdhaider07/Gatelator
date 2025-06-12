@@ -1,0 +1,39 @@
+<svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="iconGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3B82F6" />
+      <stop offset="50%" stop-color="#8B5CF6" />
+      <stop offset="100%" stop-color="#EC4899" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="32" height="32" rx="6" fill="url(#iconGradient)" />
+  
+  <!-- Logic gates with numbers -->
+  <!-- Gate 1 -->
+  <rect x="2" y="2" width="12" height="8" rx="2" fill="rgba(255,255,255,0.9)" />
+  <text x="8" y="8" text-anchor="middle" font-size="6" font-weight="bold" fill="#1E40AF">1</text>
+  
+  <!-- Gate 2 -->
+  <rect x="18" y="2" width="12" height="8" rx="2" fill="rgba(255,255,255,0.9)" />
+  <text x="24" y="8" text-anchor="middle" font-size="6" font-weight="bold" fill="#7C3AED">2</text>
+  
+  <!-- Gate 3 -->
+  <rect x="2" y="22" width="12" height="8" rx="2" fill="rgba(255,255,255,0.9)" />
+  <text x="8" y="28" text-anchor="middle" font-size="6" font-weight="bold" fill="#DB2777">3</text>
+  
+  <!-- Gate 4 -->
+  <rect x="18" y="22" width="12" height="8" rx="2" fill="rgba(255,255,255,0.9)" />
+  <text x="24" y="28" text-anchor="middle" font-size="6" font-weight="bold" fill="#059669">4</text>
+  
+  <!-- Central processing -->
+  <circle cx="16" cy="16" r="4" fill="none" stroke="rgba(255,255,255,0.8)" stroke-width="1" />
+  <text x="16" y="18" text-anchor="middle" font-size="4" fill="white">⚡</text>
+  
+  <!-- Connection lines -->
+  <line x1="14" y1="6" x2="18" y2="6" stroke="rgba(255,255,255,0.6)" stroke-width="1" />
+  <line x1="14" y1="26" x2="18" y2="26" stroke="rgba(255,255,255,0.6)" stroke-width="1" />
+  <line x1="8" y1="10" x2="8" y2="22" stroke="rgba(255,255,255,0.6)" stroke-width="1" />
+  <line x1="24" y1="10" x2="24" y2="22" stroke="rgba(255,255,255,0.6)" stroke-width="1" />
+</svg>

@@ -30,7 +30,9 @@ export function Display({
         <div className="text-center">
           <div className="text-xl lg:text-2xl font-mono font-bold">
             <span className="text-blue-400">{formatNumber(inputA)}</span>
-            <span className="text-orange-400 mx-2 text-2xl lg:text-3xl">{operation}</span>
+            <span className="text-orange-400 mx-2 text-2xl lg:text-3xl">
+              {operation}
+            </span>
             <span className="text-green-400">{formatNumber(inputB)}</span>
           </div>
         </div>

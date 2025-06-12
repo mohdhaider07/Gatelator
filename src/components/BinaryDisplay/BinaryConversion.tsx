@@ -22,29 +22,44 @@ export function BinaryConversion({
       animate={{ opacity: 1, scale: 1 }}
       transition={{ delay, duration: 0.5 }}
       className={`bg-gray-800/40 border-2 rounded-xl p-6 ${
-        color === 'blue' ? 'border-blue-500/30' : 
-        color === 'green' ? 'border-green-500/30' : 
-        color === 'red' ? 'border-red-500/30' : 
-        'border-gray-500/30'
+        color === "blue"
+          ? "border-blue-500/30"
+          : color === "green"
+          ? "border-green-500/30"
+          : color === "red"
+          ? "border-red-500/30"
+          : "border-gray-500/30"
       }`}
     >
       <div className="text-center">
-        <h4 className={`text-xl font-bold mb-4 ${
-          color === 'blue' ? 'text-blue-300' : 
-          color === 'green' ? 'text-green-300' : 
-          color === 'red' ? 'text-red-300' : 
-          'text-gray-300'
-        }`}>{label}</h4>
+        <h4
+          className={`text-xl font-bold mb-4 ${
+            color === "blue"
+              ? "text-blue-300"
+              : color === "green"
+              ? "text-green-300"
+              : color === "red"
+              ? "text-red-300"
+              : "text-gray-300"
+          }`}
+        >
+          {label}
+        </h4>
 
         {/* Decimal Display */}
         <div className="mb-4">
           <span className="text-gray-400 text-sm">Decimal:</span>
-          <div className={`text-4xl font-bold font-mono ${
-            color === 'blue' ? 'text-blue-400' : 
-            color === 'green' ? 'text-green-400' : 
-            color === 'red' ? 'text-red-400' : 
-            'text-gray-400'
-          }`}>
+          <div
+            className={`text-4xl font-bold font-mono ${
+              color === "blue"
+                ? "text-blue-400"
+                : color === "green"
+                ? "text-green-400"
+                : color === "red"
+                ? "text-red-400"
+                : "text-gray-400"
+            }`}
+          >
             {decimal}
           </div>
         </div>
@@ -77,11 +92,14 @@ export function BinaryConversion({
                 w-12 h-12 rounded-lg flex items-center justify-center font-bold text-lg shadow-lg
                 ${
                   bit === "1"
-                    ? color === 'blue' ? 'bg-blue-600 text-white border-2 border-blue-400' :
-                      color === 'green' ? 'bg-green-600 text-white border-2 border-green-400' :
-                      color === 'red' ? 'bg-red-600 text-white border-2 border-red-400' :
-                      'bg-gray-600 text-white border-2 border-gray-400'
-                    : 'bg-gray-700 text-gray-300 border-2 border-gray-600'
+                    ? color === "blue"
+                      ? "bg-blue-600 text-white border-2 border-blue-400"
+                      : color === "green"
+                      ? "bg-green-600 text-white border-2 border-green-400"
+                      : color === "red"
+                      ? "bg-red-600 text-white border-2 border-red-400"
+                      : "bg-gray-600 text-white border-2 border-gray-400"
+                    : "bg-gray-700 text-gray-300 border-2 border-gray-600"
                 }
               `}
             >

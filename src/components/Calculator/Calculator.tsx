@@ -4,6 +4,7 @@ import { Display } from "./Display";
 import { Controls } from "./Controls";
 import { BinaryVisualization } from "../BinaryDisplay/BinaryVisualization";
 import { BinaryConversion } from "../BinaryDisplay/BinaryConversion";
+import { LogoSVG, MobileLogoSVG } from "../UI/LogoSVG";
 
 export function Calculator() {
   const {
@@ -23,20 +24,29 @@ export function Calculator() {
       <motion.div
         initial={{ opacity: 0, y: -30 }}
         animate={{ opacity: 1, y: 0 }}
-        className="text-center py-8 bg-black/20 border-b border-blue-500/30"
+        className="text-center py-4 lg:py-8 bg-black/20 border-b border-blue-500/30"
       >
-        <h1 className="text-6xl font-bold mb-4 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-          🔢 Binary Logic Calculator
-        </h1>
-        <p className="text-blue-200 text-xl max-w-3xl mx-auto">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4 mb-4 px-4">
+          {/* Show mobile logo on small screens, full logo on larger screens */}
+          <div className="block sm:hidden">
+            <MobileLogoSVG className="w-16 h-8" />
+          </div>
+          <div className="hidden sm:block">
+            <LogoSVG className="w-20 h-10 lg:w-32 lg:h-16" />
+          </div>
+          <h1 className="text-2xl sm:text-3xl lg:text-5xl xl:text-6xl font-bold bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent text-center">
+            Binary Logic Calculator
+          </h1>
+        </div>
+        <p className="text-blue-200 text-sm sm:text-lg lg:text-xl max-w-3xl mx-auto px-4">
           Watch how computers really calculate: Step-by-step binary arithmetic
           with animated logic gates
         </p>
       </motion.div>
 
-      <div className="flex flex-col lg:flex-row min-h-screen">
+      <div className="flex flex-col lg:flex-row min-h-screen overflow-hidden">
         {/* Left Panel - Controls (Optimized) */}
-        <div className="lg:w-1/3 xl:w-80 p-4 lg:p-6 bg-black/30 border-r border-blue-500/20 min-h-screen overflow-y-auto">
+        <div className="lg:w-1/3 xl:w-80 p-4 lg:p-6 bg-black/30 border-r border-blue-500/20 min-h-screen overflow-y-auto flex-shrink-0">
           <div className="space-y-4 max-w-sm mx-auto">
             <Controls
               inputA={state.inputA}
@@ -61,7 +71,7 @@ export function Calculator() {
         </div>
 
         {/* Right Panel - Binary Visualization (Main Focus) */}
-        <div className="lg:w-2/3 xl:flex-1 p-4 lg:p-6">
+        <div className="lg:w-2/3 xl:flex-1 p-4 lg:p-6 overflow-hidden">
           {/* Show binary conversions when numbers are entered but not calculating */}
           {!state.showAnimation && (state.inputA || state.inputB) && (
             <motion.div
@@ -232,14 +242,14 @@ export function Calculator() {
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              className="h-full flex items-center justify-center"
+              className="h-full pt-8"
             >
               <div className="text-center">
                 <div className="text-8xl mb-8">🔍</div>
                 <h2 className="text-4xl font-bold text-blue-300 mb-4">
                   Ready to Explore Binary Magic?
                 </h2>
-                <p className="text-xl text-blue-200 mb-8 max-w-2xl">
+                <p className="text-xl text-blue-200 mb-8 max-w-2xl mx-auto">
                   Enter two numbers and select an operation to see how computers
                   perform calculations using binary arithmetic and logic gates.
                 </p>
